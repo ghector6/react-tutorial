@@ -87,6 +87,8 @@ export default function Game() {
 
   }
   function jumpTo(nextMove){
+    setCurrentMove(nextMove);
+    setXIsNext(nextMove % 2 === 0);
   }
   const moves = history.map((step, move) => {
     let description;
